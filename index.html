@@ -5,13 +5,19 @@
  </head>
  <body>
 
-  <input type="text" onkeypress="myFunction()">
 
-  <script>
-    function hackerman(){
-      document.write("Test");
-    }
-  </script>
+   <script>
+     var p = document.createElement("p");
+     var element = document.getElementById("body");
+     
+     document.addEventListener("keypress", myFunction);
+
+     function hackerman(){
+       let node = document.createTextNode("Hippity hoppity, get off my property!");
+       p.appendChild(node);
+       element.appendChild(p)
+     }
+   </script>
 
  </body>
 </html>

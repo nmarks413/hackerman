@@ -303,15 +303,15 @@ public class UnsortedHashSet<E> {
  }
 `.split('\n')
 
-
 var i = 0
 
 document.addEventListener("keypress", hackerman);
 function hackerman(){
-  let node = document.createTextNode(fluff[i]);
+  let node = document.createTextNode(fluff[i].replace(/\s/g, '\u00a0'));
   i++;
-  if (i>303) {i=0;};
+  if (i>fluff.length) {i=0;};
   let p = document.createElement("p");
   p.appendChild(node);
   document.body.appendChild(p);
+  p.scrollIntoView();
 }

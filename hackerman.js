@@ -306,7 +306,9 @@ public class UnsortedHashSet<E> {
 var i = 0
 
 document.addEventListener("keypress", hackerman);
+
 function hackerman(){
+
   let node = document.createTextNode(fluff[i].replace(/\s/g, '\u00a0'));
   i++;
   if (i>fluff.length) {i=0;};
@@ -314,4 +316,5 @@ function hackerman(){
   p.appendChild(node);
   document.body.appendChild(p);
   p.scrollIntoView();
+  
 }

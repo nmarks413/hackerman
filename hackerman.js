@@ -301,15 +301,16 @@ public class UnsortedHashSet<E> {
   public void setNext(ListNode next)
   {	myNext = next;	}
  }
-`
-var fluff1 = fluff.split('\n')
+`.split('\n')
+
 
 var i = 0
 
 document.addEventListener("keypress", hackerman);
 function hackerman(){
-  let node = document.createTextNode(fluff1[i]);
+  let node = document.createTextNode(fluff[i]);
   i++;
+  if (i>303) {i=0;};
   let p = document.createElement("p");
   p.appendChild(node);
   document.body.appendChild(p);
